@@ -1,0 +1,216 @@
+@font-face {
+    font-family: Trebuchetms;
+    src: url(../public/trebuchetms.ttf);
+}
+
+.food-item__card {
+    width: 322px;
+    height: 480px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: 11px;
+    background-color: #F2F2F2;
+    background-image: url("../public/Cat.png");
+    background-repeat: no-repeat;
+    background-position: -25px 200px;
+    position: relative;
+    white-space: pre-line;
+    -webkit-clip-path: polygon(15% 0, 100% 0, 100% 0, 100% 100%, 100% 100%, 0 100%, 0 100%, 0 10%);
+    clip-path: polygon(15% 0, 100% 0, 100% 0, 100% 100%, 100% 100%, 0 100%, 0 100%, 0 10%);
+    cursor: pointer;
+}
+
+.food-item__card_default {
+    border: 5px solid #1698D9;
+}
+
+.food-item__card_default:hover {
+    border: 5px solid #2EA8E6;
+}
+
+.food-item__card_default:after {
+    content: "";
+    position: absolute;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    height: 80px;
+    width: 5px;
+    background-color: #1698D9;
+    top: -24px;
+    left: 23px;
+}
+
+.food-item__card_selected {
+    border: 5px solid #D91667;
+}
+
+
+.food-item__card_selected-hover:hover {
+    border: 5px solid #E52E7A;
+}
+
+.food-item__card_selected-hover:hover::after {
+    background-color: #E52E7A;
+}
+
+.food-item__card_selected-hover:hover .food-item__weight-block_selected {
+    background-color: #E52E7A;
+}
+
+.food-item__card_default:hover .food-item__weight-block_default {
+    background-color: #2EA8E6;
+}
+
+.food-item__card_selected:after {
+    content: "";
+    position: absolute;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    height: 80px;
+    width: 5px;
+    background-color: #D91667;
+    top: -24px;
+    left: 23px;
+}
+
+.food-item__card_inactive {
+    border: 5px solid #B3B3B3;
+}
+
+.food-item__card_inactive:after {
+    content: "";
+    position: absolute;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    height: 80px;
+    width: 5px;
+    background-color: #B3B3B3;
+    top: -24px;
+    left: 23px;
+}
+
+.card-text {
+    margin-left: 45px;
+    font-family: Trebuchetms, arial;
+}
+
+.food-item__first-line {
+    color: #666666;
+    margin-top: 16px;
+    font-size: 16px;
+}
+
+.food-item__brand {
+    font-size: 48px;
+    font-weight: bold;
+    margin-top: 6px;
+    letter-spacing: 1px;
+}
+
+.food-item__compound {
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 1.2px;
+}
+
+.food-item__prize {
+    font-size: 14px;
+    color: #666666;
+    margin-top: 12px;
+}
+
+.food-item__weight-block {
+    position: absolute;
+    margin-left: 0;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    text-align: center;
+    bottom: 10px;
+    right: 11px;
+    color: white;
+}
+
+.food-item__weight-block_default {
+    background-color: #1698D9;
+}
+
+.food-item__weight-block_selected {
+    background-color: #D91667;
+}
+
+.food-item__weight-block_inactive {
+    background-color: #B3B3B3;
+}
+
+.food-item__weight-number {
+    font-size: 42px;
+    margin-top: 7px;
+}
+
+.food-item__descr {
+    color: white;
+    text-align: center;
+    font-family: Trebuchetms, arial;
+    font-size: 13px;
+    margin-top: 22px;
+}
+
+.food-item__descr-buy {
+    color: #2680EB;
+    text-decoration: none;
+}
+
+.food-item__descr-buy:hover {
+    border-bottom: 1px dashed #2680EB;
+}
+
+.out-of-product {
+    color: #FFFF66
+}
+
+.hider {
+    position: absolute;
+    width: 313px;
+    height: 472px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: 7px;
+    background-color: white;
+    border: 5px solid white;
+    -webkit-clip-path: polygon(15% 0, 100% 0, 100% 0, 100% 100%, 100% 100%, 0 100%, 0 100%, 0 10%);
+    clip-path: polygon(15% 0, 100% 0, 100% 0, 100% 100%, 100% 100%, 0 100%, 0 100%, 0 10%);
+    cursor: pointer;
+    top: -1px;
+    opacity: 0.4;
+}
+
+.not-show {
+    visibility: hidden;
+}
+
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 768px) {
+    .food-item {
+        margin-top: 50px;
+    }
+}
+
+@media only screen
+and (min-device-width: 768px)
+and (max-device-width: 1024px) {
+    #item-1 {
+        min-width: 100%;
+    }
+    #item-1 .food-item__card {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .food-item {
+        margin-top: 50px;
+    }
+}
